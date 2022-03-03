@@ -1,0 +1,10 @@
+/**: #namespace and node name
+  ros__parameters:
+    max_speed: 1.0
+    max_steer: 15
+    vehicle_length: 0.17
+    frequency: 20
+    p_gain: 5.0
+    i_gain: 0.0                          
+    d_gain: 0.0
+    mode: 'auto'        ## keyboard, auto
