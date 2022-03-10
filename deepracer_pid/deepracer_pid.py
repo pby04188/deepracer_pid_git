@@ -109,19 +109,14 @@ class DeepracerPID(Node):
         ##angular_vel += self.pid_ang_vel.pid(self.target_angular_vel, self.current_angular_vel)
         ##linear_vel = self.target_linear_vel
         ##angular_vel = self.target_angular_vel
-
-        '''if linear_vel > self.max_speed:
-            linear_vel = self.max_speed
-        elif linear_vel < -self.max_speed:
-            linear_vel = -self.max_speed'''
             
         target_throttle = linear_vel / self.max_speed
         #target_steer = (self.vehicle_length * angular_vel / (linear_vel + 0.0000001)) / self.max_steer
         target_angle = self.target_angular_vel
 
-        if target_angle > 1.0:
+        if target_angle > 0.17:
             target_angle = 1.0
-        elif target_angle < -1.0:
+        elif target_angle < -0.17:
             target_angle = -1.0
 
         if target_throttle > 0.8:
